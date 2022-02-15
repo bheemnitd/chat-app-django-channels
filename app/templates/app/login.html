@@ -1,0 +1,20 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block login %}
+    <div class="card auth-card">
+        <div class="card-body text-center">
+            <img src="{% static 'shortstring.png' %}" alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+            <div class="container mt-3">
+                <form method="POST" id="login-form">
+                    {% csrf_token %}
+                    <input type="email" class="form-control form-control-md mt-3" id="email" name="email" placeholder="Email ID">
+                    <input type="password" class="form-control form-control-md mt-3" id="password" name="password" placeholder="Password">
+                </form>
+                <div class="d-grid">
+                    <button class="btn-dark btn-lg mt-2" id="login-submit-btn">LOGIN</button>
+                </div>
+            </div>
+        </div>
+      <div class="card-footer text-center">Don't have account? <a href="{% url 'registration' %}">REGISTER</a></div>
+    </div>
+{% endblock %}

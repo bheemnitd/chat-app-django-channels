@@ -1,0 +1,87 @@
+.container-fluid {
+  padding-right:0;
+  padding-left:0;
+  margin-right:auto;
+  margin-left:auto
+}
+.auth-card{
+  width: 30%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-100%, -100%);
+  transform: translate(-50%, -50%)
+}
+
+.reply-box{
+display:inline-block;
+width: 100%;
+margin-bottom: -15px;
+}
+.friend-text-reply{
+border-radius: 0px 20px 20px 20px;
+
+/* word-wrap: break-word; */
+}
+.user-text-reply{
+border-radius: 20px 0px 20px 20px;
+
+}
+.friend{
+border-radius: 10px;
+}
+
+.friend:hover{
+  cursor:pointer;
+  font-size: large;
+}
+
+#online-friends {
+    float: right;
+    width: 25%;
+    height: 94%;
+    overflow: auto;
+}
+ 
+/* #chat-log{
+  margin-left:0px;
+  margin-right:0px;
+} */
+  
+#message-reply-input-box{
+  position: relative;
+  top:-26px;
+  margin-bottom:5px !important;
+  border-radius: 20%;
+}
+#chat-message-input{
+  position: relative;
+  border-radius: 10px;
+  width: 85%;
+
+  border: none;
+  /* box-shadow: none; */
+  resize: none;
+  outline: none;
+  /* row-gap: 4; */
+}
+.alert-lite{
+  background-color: rgb(255, 255, 255);
+}
+
+.alert-basic{
+  background-color: rgb(21, 92, 223);
+  color: aliceblue;
+}
+
+#message-send-btn{
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}

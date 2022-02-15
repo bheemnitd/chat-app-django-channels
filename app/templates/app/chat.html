@@ -1,0 +1,35 @@
+{% extends 'app/index.html' %}
+{% load static %}
+{% block chat %}
+    <div class="row vh-100 vw-100" style="margin-left:0px;">
+        <nav class="navbar navbar-expand-sm bg-secondary p-2">
+            <div class="container-fluid text-white">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="{% static 'shortstring.png' %}" class="rounded-pill" id="{{user.id}}" alt="Avatar Logo" style="width:40px;" > 
+                    {{user.name|upper}}<meta id="user-id" data-name="{{user.id}}">
+                </a>
+                <a href="{% url 'logout' %}" class="nav-link">
+                    <button class="btn btn-basic d-flex text-white" type="button">Logout</button>
+                </a>
+            </div>
+        </nav>
+        <div class="col-sm-3 overflow-auto" style="height:92.3%;background-color: rgb(173, 175, 177);">
+            {% for friend in friends %}
+                    <div class="alert-lite p-3 mt-3 friend" id="{{friend.id}}">
+                        <img src="{% static 'shortstring.png' %}" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+                        {{friend.name|title}}
+                        <span class="rounded-circle float-end" style="width: 10px;height: 10px;margin: 6px;background-color: rgb(116, 207, 55);"></span>
+                    </div>
+            {% endfor %}
+        </div>
+        <div class="col-sm-9" style="height:92.3%; margin-right:0px; padding:0px;">
+            <div class="overflow-auto p-2" id="chat-log" style="height:91%; padding:0px;">
+                <div class="" id="chat-log-homepage" style="vertical-align: middle; position;absolute"><h1 class="auth-card">Welcome to sort-string solution</h1></div>
+            </div>
+            <div class="input-group overflow-hidden" id="msg-input-div" style="position:absolute;bottom:2px;width:74.9%;border:2px solid; color:black; border-radius:10px;">
+                <textarea class="form-control responsible" id="chat-message-input" placeholder="Write your message here..." rows="2" style="border:None;box-shadow: none; resize: None;"></textarea>
+                <button class="btn btn-secondary btn-lg" id="chat-message-submit" style="border:None; box-shadow: none; resize: None;">SEND</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

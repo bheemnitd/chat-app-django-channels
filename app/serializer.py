@@ -1,17 +1,18 @@
 from app.models import User, Chat
 from rest_framework import serializers
+
+
 class UserSerializer(serializers.ModelSerializer):
-    
     class Meta:
-        model=User
-        fields="__all__"
+        model = User
+        fields = "__all__"
+
 
 class ChatSerializer(serializers.ModelSerializer):
-    
     class Meta:
-        model=Chat
-        fields="__all__"        
-    # name = serializers.CharField(
+        model = Chat
+        fields = "__all__"
+        # name = serializers.CharField(
     #     max_length=60,
     #     required=True,
     #     style={'input_type': 'text', 'placeholder': 'Name'},

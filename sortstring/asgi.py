@@ -8,8 +8,8 @@ import app.routing
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sortstring.settings")
 
 application = ProtocolTypeRouter({
-  "http": get_asgi_application(),
-  "websocket": AuthMiddlewareStack(
+    "http": get_asgi_application(),
+    "websocket": AuthMiddlewareStack(
         URLRouter(
             app.routing.websocket_urlpatterns
         )

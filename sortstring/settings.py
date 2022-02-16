@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-nitkk)t3kc%29(o^4_vw6+4!v)yt#bc4#^5b2u56le%$ykujg$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://sortstring.herokuapp.com']
+ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://sortstring.herokuapp.com']
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 # SECURE_SSL_REDIRECT = True
 # Application definition
 # CSRF_TRUSTED_ORIGINS = ['https://front.bluemix.net']
@@ -110,16 +110,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Channels
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             "hosts": [('127.0.0.1', 6379)],
+#             # "hosts": [(
+#             #               'redis://:OtGfoHFk02ECMBxsWauRzb12lFiPzpME@redis-18323.c264.ap-south-1-1.ec2.cloud.redislabs.com:18323')],
+#         },
+#     },
+# }
 CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            # "hosts": [('127.0.0.1', 6379)],
-            "hosts": [(
-                          'redis://:OtGfoHFk02ECMBxsWauRzb12lFiPzpME@redis-18323.c264.ap-south-1-1.ec2.cloud.redislabs.com:18323')],
-        },
-    },
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
 }
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 

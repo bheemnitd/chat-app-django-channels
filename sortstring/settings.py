@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://sortstring.herokuapp.com']
 # CORS_ALLOW_ALL_ORIGINS = True
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 # Application definition
 # CSRF_TRUSTED_ORIGINS = ['https://front.bluemix.net']
 

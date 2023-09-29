@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import LoginView, RegisterView, ChatView, LogoutView
+from .views import LoginView, RegisterView, ChatView, LogoutView, ChatGPT
 from app import views
 from rest_framework import routers
 from django.contrib.auth.decorators import login_required, permission_required
@@ -13,4 +13,5 @@ urlpatterns = [
     path('chat', ChatView.as_view(), name='chat'),
     path('logout', LogoutView.as_view(), name='logout'),
     path('api', include(router.urls)),
+    path('chat-gpt', ChatGPT.as_view(), name='chat_gpt')
 ]

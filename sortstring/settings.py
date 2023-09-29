@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-nitkk)t3kc%29(o^4_vw6+4!v)yt#bc4#^5b2u56le%$ykujg$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['127.0.0.1','localhost', 'https://sortstring.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://sortstring.herokuapp.com']
 # CORS_ALLOW_ALL_ORIGINS = True
 # SECURE_SSL_REDIRECT = True
 # Application definition

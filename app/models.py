@@ -15,7 +15,6 @@ class User(AbstractBaseUser):
     date_of_birth = models.DateField()
     contact_number = models.BigIntegerField()
 
-    contact_number = models.TextField()
     is_available = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=True)
 
